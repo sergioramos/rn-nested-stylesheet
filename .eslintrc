@@ -1,0 +1,9 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 7
+  },
+  "extends": "semistandard",
+  "rules": {
+    "space-before-function-paren": [2, "never"]
+  }
+}
