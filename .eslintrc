@@ -1,6 +1,6 @@
 {
   "parserOptions": {
-    "ecmaVersion": 7
+    "ecmaVersion": 6
   },
   "extends": "semistandard",
   "rules": {

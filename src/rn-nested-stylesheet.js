@@ -3,14 +3,13 @@ const map = require('lodash.map');
 const isPlainObject = require('lodash.isplainobject');
 const some = require('lodash.some');
 
-
 const _reduce = function(sum, item) {
   sum[item.key] = (function() {
     if (item.nested) {
       return transform(item.StyleSheet, item.val);
     }
 
-    return item.StyleSheet.create(item.val)
+    return item.StyleSheet.create(item.val);
   })();
 
   return sum;
