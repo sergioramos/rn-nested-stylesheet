@@ -5,8 +5,16 @@ const StyleSheet = (function() {
   let i = 0;
 
   return {
-    create: function() {
-      return i++;
+    create: function(ss) {
+      return Object.keys(ss).map(function(key) {
+        return {
+          key: key,
+          val: i++
+        };
+      }).reduce(function(sum, kv) {
+        sum[kv.key] = kv.val;
+        return sum;
+      }, {});
     }
   };
 })();
@@ -22,6 +30,11 @@ const example = {
     test: {
       borderRadius: 10
     }
+  },
+  anim: {
+    transform: {
+      scaleX: 1
+    }
   }
 };
 
@@ -33,6 +46,7 @@ test('should transform into a nested stylesheet tree', function(t) {
     button: 1,
     text: {
       test: 2
-    }
+    },
+    anim: 3
   });
 });
