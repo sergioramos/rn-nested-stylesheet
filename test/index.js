@@ -1,5 +1,5 @@
+const NestedStyleSheet = require('../src/rn-nested-stylesheet');
 const test = require('ava');
-const NestedStyleSheet = require('../');
 
 const StyleSheet = (function() {
   let i = 0;
