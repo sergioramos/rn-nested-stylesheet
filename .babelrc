@@ -1,6 +1,7 @@
 {
-  "sourceMaps": "both",
   "presets": [
-    "es2015"
-  ]
+    "react",
+    "react-native",
+  ],
+  "sourceMaps": "both"
 }

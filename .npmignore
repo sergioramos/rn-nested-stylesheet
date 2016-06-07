@@ -1,0 +1,12 @@
+.babelrc
+.codeclimate.yml
+.eslintignore
+.eslintrc
+.gitignore
+.istanbul.yml
+.nyc_output
+.tern-project
+.travis.yml
+coverage
+src
+test

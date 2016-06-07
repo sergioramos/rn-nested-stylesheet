@@ -1,6 +1,6 @@
 {
   "name": "rn-nested-stylesheet",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "compile nested react stylesheets",
   "keywords": [
     "react",
@@ -13,14 +13,15 @@
     "stylesheet",
     "stylesheets"
   ],
-  "homepage": "https://github.com/ramitos/rn-nested-stylesheet",
+  "homepage": "ramitos/rn-nested-stylesheet",
   "license": "MIT",
   "author": "Sérgio Ramos <mail@sergioramos.me> (http://sergioramos.me)",
-  "main": "src/rn-nested-stylesheet.js",
+  "main": "build/rn-nested-stylesheet.js",
   "directories": {
-    "lib": "src"
+    "lib": "build"
   },
   "scripts": {
+    "build": "babel src/rn-nested-stylesheet.js > build/rn-nested-stylesheet.js",
     "test": "NODE_ENV=test nyc --reporter=html ava test/*.js --fail-fast -v -t | tap-mocha-reporter spec",
     "coverage": "nyc report --reporter=text-lcov | codeclimate-test-reporter",
     "lint": "eslint ."
@@ -35,6 +36,8 @@
   "devDependencies": {
     "ava": "^0.14.0",
     "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-react-native": "^1.8.0",
     "codeclimate-test-reporter": "^0.3.1",
     "eslint": "^2.10.2",
     "eslint-config-semistandard": "^6.0.2",
